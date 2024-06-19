@@ -1,10 +1,10 @@
-
+const { error } = require("console");
 const fs = require("fs");
 
-fs.unlink("hello.txt", "utf-8", (error) => {
+fs.mkdir("storage-file", (error) => {
   if (error) {
-    console.error("file deleting error", error);
+    console.error("Folder created error", error);
   } else {
-    console.log("File was deleted");
+    console.log("Folder created");
   }
 });
