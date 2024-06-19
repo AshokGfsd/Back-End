@@ -1,10 +1,10 @@
-const { error } = require("console");
+
 const fs = require("fs");
 
-fs.readFile("hello.txt", "utf-8", (error, data) => {
+fs.unlink("hello.txt", "utf-8", (error) => {
   if (error) {
-    console.error("file writing error", error);
+    console.error("file deleting error", error);
   } else {
-    console.log(data);
+    console.log("File was deleted");
   }
 });
